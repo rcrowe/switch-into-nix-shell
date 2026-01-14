@@ -15,7 +15,7 @@ steps:
   - uses: actions/checkout@v4
 
   - name: Switch into Nix Shell
-    uses: lukas-mertens/switch-into-nix-shell@v1
+    uses: rcrowe/switch-into-nix-shell@v1
 
   - name: Use nix env
     run: |
@@ -28,7 +28,7 @@ steps:
   - uses: actions/checkout@v4
 
   - name: Switch into Nix Shell
-    uses: lukas-mertens/switch-into-nix-shell@v1
+    uses: rcrowe/switch-into-nix-shell@v1
     with:
       nix_args: '--impure'
 
