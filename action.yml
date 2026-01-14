@@ -6,17 +6,9 @@ inputs:
     description: 'Additional arguments to pass to nix print-dev-env.'
     required: false
     default: ''
-  install_nix:
-    description: 'Whether to install Nix. Set to false if Nix is already installed.'
-    required: false
-    default: 'true'
 runs:
   using: 'composite'
   steps:
-    - name: Install Nix
-      if: ${{ inputs.install_nix == 'true' }}
-      uses: cachix/install-nix-action@v27
-
     - name: Switch into Nix Shell
       shell: bash
       run: |
